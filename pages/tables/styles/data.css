@@ -1,0 +1,27 @@
+.tcc_rop{
+    background: rgba(0, 0, 0, .4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    /* display: none; */
+    overflow: auto;
+}
+.close_tcc{
+    cursor: pointer;
+    float: right;
+}
+.title{
+    border: 1px solid #ccc;
+    font-size: 19px;
+    padding: 10px;
+}
+.sel_rop{
+    padding-top: 10px;
+}
+.sel_rop select{
+    padding:5px 0;
+    width: 8rem;
+}

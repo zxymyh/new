@@ -1,0 +1,70 @@
+.card-body{
+    padding-top: 0;
+  }
+.add_rop{
+  padding:.5rem 1.2rem;
+  /* padding-bottom: 0; */
+}
+.operate{
+  font-size: .36rem;
+  color: #067fff;
+  cursor: pointer;
+  margin: 0 .1rem;
+}
+.yuan{
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: green;
+  margin-bottom: 2px;
+}
+.rrr{
+  text-align: center;
+}
+.page-link:hover{
+  background: red;
+  transition: all .6s;
+}
+.pagination{
+  margin-top:   2rem;
+  float: left;
+  
+}
+#upper,#next{
+    width: 2.3rem;
+    height: 2.3rem;
+    float: left;
+    margin-top:2rem;
+}
+#fy_rop{
+  margin: 0 auto;
+ width: auto;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.active{
+  background: #999;
+}
+.layui-layer-btn0{
+  color: #fff !important;
+}
+.zzc_rop{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index: 9998;
+  display: none;
+}
+.sidebar{
+  font-size: 1rem;
+}

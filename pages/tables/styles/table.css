@@ -1,0 +1,23 @@
+.form-group .form-control{
+    margin-right: 2.2rem;
+    width: 90%;
+}
+.form-group{
+    float: left;
+}
+#content_rop,#chu_rop{
+    display: none;
+}
+.image{
+    width: 18px;
+    height: 18px;
+    vertical-align:top;
+}
+table{
+  text-align: center;
+}
+select{
+  width: 100px;
+  border: none;
+}
+

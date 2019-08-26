@@ -1,0 +1,189 @@
+/*生产线1抉择*/
+
+
+/*选择器的样式*/
+.machineChoose{
+    position: relative;
+    overflow: hidden;
+    width: 40%;
+    float: left;
+    margin-bottom: 2%;
+}
+.machineChoose li{
+    border: 1px solid #cac8c8;
+    height: 38px;
+    width: 40%;
+    text-align:center;
+    line-height:36px;
+    float: left;
+    cursor: pointer;
+    list-style:none;
+    border-radius: 5px;
+    margin-right: 5%;
+}
+.t2{
+    margin-left: -32px;
+}
+.background{
+    background-color:#007bff;
+    color:white;
+}
+
+/*自定义生产线的样式*/
+.dsSelect{
+    width: 100%;
+    text-align: center;
+}
+.dsSelect>.left,.dsSelect>.center,.dsSelect>.right{
+    height: 400px;
+    border: solid thin #73879C;
+    border-radius: 5px;
+    margin: 0 auto;
+    float: left;
+    overflow: auto;
+}
+.dsSelect .center{
+    width: 100px;
+    text-align: center;
+    vertical-align:middle;
+    border: none;
+}
+.dsSelect .left{
+    width: 40%;
+}
+
+.dsSelect  .dsList{
+    list-style: none;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+.dsSelect .dsList li{
+    border: solid thin #73879C;
+    width: 90%;
+    margin: 2px auto;
+    font-size: 16px;
+    line-height: 35px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.dsSelect .dsList li:hover{
+    background-color:#485d74;
+    color: #FFFFFF;
+}
+
+.dsSelect .dsList .selectItem{
+    background-color:#485d74;
+    color: #FFFFFF;
+}
+.dsSelect .right{
+    width: 40%;
+}
+.dsSelect .center .dsButton{
+    width: 80px;
+    background: #73879C;
+    color: #FFFFFF;
+    line-height: 30px;
+    margin: 30% auto;
+    cursor: pointer;
+}
+.dsButton1{
+    width: 80px;
+    background: #73879C;
+    color: #FFFFFF;
+    line-height: 30px;
+    margin: 30% auto;
+    cursor: pointer;
+}
+.dsSelect .center .dsButton:hover{
+    background-color:#485d74;
+}
+.selectStyl{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.cai{
+    margin: 10px 0; 
+  }
+  .state{
+    color: #007bff;
+    font-size: .38rem;
+    border-top: none;
+    padding-top: 0;
+  }
+  .num{
+    color: #045ebf;
+  }
+  .inp1{
+    width: 80px;
+    height: 20px;
+    font-size: .3rem;
+  }
+  .img_inp{
+      width: 125px;
+      height: 128px;
+      text-align: center;
+      float: left;
+  }
+  .img_inp p{
+      font-weight: bold;
+      margin-bottom: 0;
+  }
+  .sel{
+      width: 80px;
+  }
+  #lower{
+      /* width: auto; */
+      text-align: center;
+      margin-bottom: 20px;
+      padding:0 10px;
+      text-align-last: center;
+  }
+  #lower option{
+      text-align: center;
+      text-align-last: center;
+  }
+  .pcxz_rop{
+      display: flex;
+      /* flex-direction: column; */
+  }
+  .lower_rop{
+      margin-right: 30px;
+    margin-left: 10px;
+  }
+  .xx{
+      font-weight: bold;
+      margin-right: 10px;
+  }
+  .xxxx{
+      border: 1px solid #333;
+      padding: 0 10px;
+  }
+  .que{
+      height: 27px;
+      line-height: 10px;
+      width: 80px;
+      margin-left: 20px;
+  }
+  .reset{
+    height: 27px;
+    line-height: 10px;
+    width: 80px;
+    margin-left: 20px;  
+      display: none;
+  }
+  .bor{
+      border-bottom: 3px solid #007bff;
+  }
+  .clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    }

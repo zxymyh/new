@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+ <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>鲜切蔬菜平台</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../../plugins/datatables/dataTables.bootstrap4.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="../../dist/css/new.css">
+  <link rel="stylesheet" href="../../dist/js/layui/css/layui.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="./styles/table.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<!--
+&lt;!&ndash; 模态框（Modal） &ndash;&gt;
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="width: 1500px;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">
+          鲜切产品生产报告
+        </h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+          &times;
+        </button>
+      </div>
+      <div class="modal-body">
+          <div style="width: 888px;">
+            <h2>鲜切<input placeholder="产品品类" type="text" >生产报告</h2>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">
+          保存为
+        </button>
+      </div>
+    </div>&lt;!&ndash; /.modal-content &ndash;&gt;
+  </div>&lt;!&ndash; /.modal &ndash;&gt;
+</div>
+-->
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+      </li>
+      <!-- <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">引导</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a class="nav-link" data-toggle="modal" data-target="#myModal">数据填表</a>
+      </li> -->
+    </ul>
+
+    
+
+    <!-- Right navbar links -->
+     <!-- <ul class="navbar-nav ml-auto"> -->
+      <!-- Messages Dropdown Menu -->
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fa fa-comments-o"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item"> -->
+            <!-- Message Start -->
+            <!-- <div class="media">
+              <img src="../../dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                            工作人员
+                  <span class="float-right text-sm text-danger"><i class="fa fa-star"></i></span>
+                </h3>
+                <p class="text-sm">000批次切菜已经完成</p>
+                <p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div> -->
+            <!-- Message End -->
+          <!-- </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item"> -->
+            <!-- Message Start -->
+            <!-- <div class="media">
+              <img src="../../dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                           科研人员
+                  <span class="float-right text-sm text-muted"><i class="fa fa-star"></i></span>
+                </h3>
+                <p class="text-sm">000批次信息补充完成</p>
+                <p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div> -->
+            <!-- Message End -->
+          <!-- </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item"> -->
+            <!-- Message Start -->
+            <!-- <div class="media">
+              <img src="../../dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                             一般用户 
+                  <span class="float-right text-sm text-warning"><i class="fa fa-star"></i></span>
+                </h3>
+                <p class="text-sm">此区域功能为系统信息</p>
+                <p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div> -->
+            <!-- Message End -->
+          <!-- </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">查看更多</a>
+        </div>
+      </li> -->
+      <!-- Notifications Dropdown Menu -->
+      
+       <!-- <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fa fa-bell-o"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li> -->
+      
+      
+     
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="../../index3.html" class="brand-link">
+      <img src="../../dist/img/AdminLTELogo.png"
+           alt="AdminLTE Logo"
+           class="brand-image img-circle elevation-3"
+           style="opacity: .8">
+      <span class="brand-text font-weight-light">鲜切蔬菜平台</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="../../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">张超老师</a>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item has-treeview">
+            <a href="../../ready.html" class="nav-link">
+              <i class="nav-icon fa fa-dashboard"></i>
+              <p>
+                              准备
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+           
+          </li>
+          <li class="nav-item">
+            <a href="../forms/advanced.html" class="nav-link">
+              <i class="nav-icon fa fa-th"></i>
+              <p>
+                              生产
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+          </li>  
+
+          <li class="nav-item has-treeview ">
+            <a href="#" class="nav-link ">
+              <i class="nav-icon fa fa-pie-chart "></i>
+              <p>
+                           报告
+                <i class="right fa fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="data.html" class="nav-link active">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>报告列表</p>
+                </a>
+              </li>
+              <!-- <li class="nav-item">
+                <a href="../charts/flot.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>图表</p>
+                </a>
+              </li> -->
+              <li class="nav-item">
+                <a href="./save.html" class="nav-link">
+                  <i class="fa fa-circle-o nav-icon"></i>
+                  <p>填报</p>
+                </a>
+              </li>
+             
+            </ul>
+          </li>
+          <li class="nav-item has-treeview ">
+            <a href="../../index3.html" class="nav-link">
+              <i class="nav-icon fa fa-tree"></i>
+              <p>
+                              预测
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview">
+            <a href="../charts/inline.html" class="nav-link ">
+              <i class="nav-icon fa fa-edit"></i>
+              <p>
+                             设备管理
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview ">
+            <a href="../forms/user.html" class="nav-link ">
+              <i class="nav-icon fa fa-table"></i>
+              <p>
+                              用户设定
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item has-treeview ">
+            <a href="simple.html" class="nav-link active">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                              出入库信息
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>出入库</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">出入库信息</a></li>
+              <li class="breadcrumb-item active">当前位置</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">库存信息</h3>
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="搜索">
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0">
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>原料批次</th>
+                      <th>蔬菜</th>
+                      <th>重量</th>
+                      <th>存放地点</th>
+                      <th>入库时间</th>
+                      <th>原料产地</th>
+                      <th>备注信息</th>
+                      <th>操作</th>
+                    </tr>
+                  </thead>
+                <tbody id="kcxx">
+                  <!-- <tr>
+                    <td>183</td>
+                    <td>李安</td>
+                    <td>11-7-2018</td>
+                    <td><span class="tag tag-success">西红柿</span></td>
+                    <td>出入库信息完整，采用的自定义鲜切菜，节水率提升</td>
+                    <td><button class="btn btn-default">修改</button></td>
+                  </tr> -->
+                </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div><!-- /.row -->
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title float-left">出库信息</h3>
+                <button class="btn btn-primary float-right" id="chu">添加出库</button>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th style="width:16%">原料批次</th>
+                    <th>蔬菜名字</th>
+                    <th>时间</th>
+                    <th>重量</th>
+                  </tr>
+                </thead>
+                  <tbody id="ck_rop"> 
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <ul class="pagination pagination-sm m-0 float-right">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- /.card -->
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title float-left">入库信息</h3>
+                <!-- <button class="btn btn-primary float-right">添加入库</button> -->
+                <button type="button" id="addbtn" class="btn btn-primary float-right" >添加入库</button>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table class="table table-bordered" >
+                <thead>
+                  <tr>
+                    <th style="width:16%">原料批次</th>
+                    <th>蔬菜名字</th>
+                    <th>时间</th>
+                    <th>重量</th>
+                  </tr>
+                </thead>
+              <tbody id="t_body">
+              </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+              <div class="card-footer clearfix">
+                <ul class="pagination pagination-sm m-0 float-right">
+                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- /.card -->
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+        
+      </div><!-- /.container-fluid -->
+    </section>
+  </div>
+  <!-- 添加入库盒子 -->
+  <div class="content-wrapper" id="content_rop">
+          <div class="modal-header">
+            <h4 class="modal-title" id="myModalLabel">
+            <img src="../../dist/img/编辑.png" alt="" class="image"></span> 添加入库产品
+            </h4>
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+              &times;
+            </button>
+          </div> 
+          <div class="modal-body">
+            <form id="inp_rop">
+            <div class="input-group">
+              <span class="suo1 pub">原料种类</span>
+              <input type="text"  class="form-control">
+            </div>
+            
+            <div class="input-group zhong">
+              <span class="suo1 pub">原料重量(KG)</span>
+              <input type="text"  class="form-control">
+            </div>
+            <div class="input-group">
+                <span class="suo1 pub">原料来源</span>
+                <input type="text"  class="form-control">
+              </div>
+              <div class="input-group zhong">
+                <span class="suo1 pub">原料产地(省/市)</span>
+                <input type="text" class="form-control">
+              </div>
+              <div class="input-group">
+                  <span class="suo1 pub">原料采收时间</span>
+                  <input type="text"  class="form-control">
+                </div>
+                <div class="input-group zhong">
+                  <span class="suo1 pub">原料贮藏方式</span>
+                  <input type="text"  class="form-control">
+                </div>
+                <div class="input-group">
+                  <span class="suo1 pub">产地准入标准</span>
+                  <input type="text"  class="form-control">
+                </div>
+                <div class="input-group zhong">
+                  <span class="suo1 pub">水分含量(%)</span>
+                  <input type="text"  class="form-control">
+                </div>
+                <div class="input-group">
+                  <span class="suo1 pub">叶绿素含量(mg/g)</span>
+                  <input type="text"  class="form-control">
+                </div>
+                <div class="input-group zhong">
+                  <span class="suo1 pub">Vc含量(mg/g)</span>
+                  <input type="text"  class="form-control">
+                </div>
+                <div class="input-group">
+                  <span class="suo1 pub">菌落总数(CFU/g)</span>
+                  <input type="text"  class="form-control">
+                </div>
+                <div class="input-group zhong">
+                  <span class="suo1 pub">备注</span>
+                  <input type="text"  class="form-control">
+                </div>
+                
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-primary" id="add">
+                  提交
+                </button>
+          </div>
+        </form>
+  </div>
+  <!-- 添加出库盒子 -->
+  <div class="content-wrapper" id="chu_rop">
+    <div class="modal-header">
+      <h4 class="modal-title" id="myModalLabel">
+      <img src="../../dist/img/编辑.png" alt="" class="image"></span> 添加出库产品
+      </h4>
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+    </div> 
+    <div class="modal-body">
+      <form id="inp_rop1">
+      <div class="input-group">
+        <span class="suo2 pub">原料批次</span>
+        <input type="text"  class="form-control">
+      </div>
+      <div class="input-group zhong">
+        <span class="suo2 pub">出库重量</span>
+        <input type="text"  class="form-control">
+      </div>
+      <div class="input-group zhong">
+          <span class="suo2 pub">用途</span>
+          <input type="text"  class="form-control">
+        </div>
+        <div class="input-group">
+            <span class="suo2 pub">备注</span>
+            <input type="text"  class="form-control">
+          </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="out">
+            提交
+          </button>
+    </div>
+  </form>
+
+
+</div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.0.0-alpha
+    </div>
+    <strong>Copyright &copy; 2014-2018 <a href="#">AdminLTE.io</a>.</strong> All rights
+    reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Slimscroll -->
+<script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../dist/js/demo.js"></script>
+<script src="../../dist/js/layui/layui.all.js"></script>
+<script src="./js/table.js"></script>
+<script>
+layui.use('laydate', function(){
+  var laydate = layui.laydate;
+  //执行一个laydate实例
+  laydate.render({
+    elem: '#test1' //指定元素
+  });
+});
+  </script>
+</body>
+</html>

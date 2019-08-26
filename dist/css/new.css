@@ -1,0 +1,48 @@
+#myModalLabel{
+    font-size: .8rem;
+    padding-top: 20px;
+}
+.xing{
+    color: red;
+}
+.input-group{
+    line-height: 38px;
+}
+.modal-body{
+    padding-left: 50px;
+}
+.zhong{
+    margin: 10px 0;
+}
+/* .suo{
+    text-indent: 2em;
+}*/
+
+.pub{
+    margin-right: 18px;
+    /* float: right; */
+}
+.suo1{
+  width: 126px;
+  text-align: right;
+}
+.suo2{
+  width: 64px;
+  text-align: right;
+}
+.modal-footer{
+    justify-content:center;
+}
+.btn-primary{
+    background: #00a652;
+    border-color: #00a652;
+}
+.suo11{
+  margin-left: -18px;
+}
+.info{
+    margin-left: 30px;
+}
+.sidebar{
+    font-size: 1rem;
+}
