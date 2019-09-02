@@ -308,9 +308,9 @@
                 <h3 class="card-title">库存信息</h3>
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right" placeholder="搜索">
+                    <input type="text" name="table_search" class="form-control float-right searchInp" placeholder="搜索">
                     <div class="input-group-append">
-                      <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                      <button type="submit" class="btn btn-default searchBtn"><i class="fa fa-search"></i></button>
                     </div>
                   </div>
                 </div>
@@ -321,12 +321,19 @@
                   <thead>
                     <tr>
                       <th>原料批次</th>
-                      <th>蔬菜</th>
-                      <th>重量</th>
+                      <th>种类</th>
+                      <th>重量(KG)</th>
                       <th>存放地点</th>
-                      <th>入库时间</th>
-                      <th>原料产地</th>
-                      <th>备注信息</th>
+                      <th>来源</th>
+                      <th>产地</th>
+                      <th>采收时间</th>
+                      <th>贮藏方式</th>
+                      <th>产地准入标准</th>
+                      <th>水分(%)</th>
+                      <th>叶绿素(mg/g)</th>
+                      <th>Vc(mg/g)</th>
+                      <th>菌落(CFU/g)</th>
+                      <th>备注</th>
                       <th>操作</th>
                     </tr>
                   </thead>
@@ -343,6 +350,9 @@
                 </table>
               </div>
               <!-- /.card-body -->
+              <div id="test1" class="card-footer clearfix">
+              </div>
+              <!-- /.card-footer -->
             </div>
             <!-- /.card -->
           </div>
@@ -363,6 +373,7 @@
                     <th>蔬菜名字</th>
                     <th>时间</th>
                     <th>重量</th>
+                    <th>备注</th>
                   </tr>
                 </thead>
                   <tbody id="ck_rop"> 
@@ -370,14 +381,7 @@
                 </table>
               </div>
               <!-- /.card-body -->
-              <div class="card-footer clearfix">
-                <ul class="pagination pagination-sm m-0 float-right">
-                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                </ul>
+              <div id="test2" class="card-footer clearfix">
               </div>
             </div>
             <!-- /.card -->
@@ -407,14 +411,7 @@
                 </table>
               </div>
               <!-- /.card-body -->
-              <div class="card-footer clearfix">
-                <ul class="pagination pagination-sm m-0 float-right">
-                  <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                  <li class="page-item"><a class="page-link" href="#">1</a></li>
-                  <li class="page-item"><a class="page-link" href="#">2</a></li>
-                  <li class="page-item"><a class="page-link" href="#">3</a></li>
-                  <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                </ul>
+              <div id="test3" class="card-footer clearfix">
               </div>
             </div>
             <!-- /.card -->
@@ -431,7 +428,7 @@
   <div class="content-wrapper" id="content_rop">
           <div class="modal-header">
             <h4 class="modal-title" id="myModalLabel">
-            <img src="../../dist/img/编辑.png" alt="" class="image"></span> 添加入库产品
+            <img src="../../dist/img/编辑.png" alt="" class="images"></span> 添加入库产品
             </h4>
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
               &times;
@@ -440,53 +437,57 @@
           <div class="modal-body">
             <form id="inp_rop">
             <div class="input-group">
-              <span class="suo1 pub">原料种类</span>
-              <input type="text"  class="form-control">
+              <span class="suo1 pub">种类</span>
+              <input type="text"  class="form-control" autocomplete="off">
             </div>
             
             <div class="input-group zhong">
-              <span class="suo1 pub">原料重量(KG)</span>
-              <input type="text"  class="form-control">
+              <span class="suo1 pub">重量(KG)</span>
+              <input type="text"  class="form-control" autocomplete="off">
+            </div>
+            <div class="input-group zhong">
+              <span class="suo1 pub">存放地点</span>
+              <input type="text"  class="form-control" autocomplete="off">
             </div>
             <div class="input-group">
-                <span class="suo1 pub">原料来源</span>
-                <input type="text"  class="form-control">
+                <span class="suo1 pub">来源</span>
+                <input type="text"  class="form-control" autocomplete="off">
               </div>
               <div class="input-group zhong">
-                <span class="suo1 pub">原料产地(省/市)</span>
-                <input type="text" class="form-control">
+                <span class="suo1 pub">产地(省/市)</span>
+                <input type="text" class="form-control" autocomplete="off">
               </div>
               <div class="input-group">
-                  <span class="suo1 pub">原料采收时间</span>
-                  <input type="text"  class="form-control">
+                  <span class="suo1 pub">采收时间</span>
+                  <input type="text"  class="form-control" autocomplete="off">
                 </div>
                 <div class="input-group zhong">
-                  <span class="suo1 pub">原料贮藏方式</span>
-                  <input type="text"  class="form-control">
+                  <span class="suo1 pub">贮藏方式</span>
+                  <input type="text"  class="form-control" autocomplete="off">
                 </div>
                 <div class="input-group">
                   <span class="suo1 pub">产地准入标准</span>
-                  <input type="text"  class="form-control">
+                  <input type="text"  class="form-control" autocomplete="off">
                 </div>
                 <div class="input-group zhong">
                   <span class="suo1 pub">水分含量(%)</span>
-                  <input type="text"  class="form-control">
+                  <input type="text"  class="form-control" autocomplete="off">
                 </div>
                 <div class="input-group">
                   <span class="suo1 pub">叶绿素含量(mg/g)</span>
-                  <input type="text"  class="form-control">
+                  <input type="text"  class="form-control" autocomplete="off">
                 </div>
                 <div class="input-group zhong">
                   <span class="suo1 pub">Vc含量(mg/g)</span>
-                  <input type="text"  class="form-control">
+                  <input type="text"  class="form-control" autocomplete="off">
                 </div>
                 <div class="input-group">
                   <span class="suo1 pub">菌落总数(CFU/g)</span>
-                  <input type="text"  class="form-control">
+                  <input type="text"  class="form-control" autocomplete="off">
                 </div>
                 <div class="input-group zhong">
                   <span class="suo1 pub">备注</span>
-                  <input type="text"  class="form-control">
+                  <input type="text"  class="form-control" autocomplete="off">
                 </div>
                 
           </div>
@@ -501,7 +502,7 @@
   <div class="content-wrapper" id="chu_rop">
     <div class="modal-header">
       <h4 class="modal-title" id="myModalLabel">
-      <img src="../../dist/img/编辑.png" alt="" class="image"></span> 添加出库产品
+      <img src="../../dist/img/编辑.png" alt="" class="images"></span> 添加出库产品
       </h4>
       <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
         &times;
@@ -511,19 +512,17 @@
       <form id="inp_rop1">
       <div class="input-group">
         <span class="suo2 pub">原料批次</span>
-        <input type="text"  class="form-control">
+        <select class="opt">
+          <option class="sel" selected='selected'>--请选择--</option>
+        </select>
       </div>
       <div class="input-group zhong">
         <span class="suo2 pub">出库重量</span>
-        <input type="text"  class="form-control">
+        <input type="text"  class="form-control" autocomplete="off">
       </div>
-      <div class="input-group zhong">
-          <span class="suo2 pub">用途</span>
-          <input type="text"  class="form-control">
-        </div>
         <div class="input-group">
             <span class="suo2 pub">备注</span>
-            <input type="text"  class="form-control">
+            <input type="text"  class="form-control" autocomplete="off">
           </div>
     </div>
     <div class="modal-footer">
@@ -534,12 +533,87 @@
   </form>
 
 
-</div>
+  </div>
+  <!-- 添加修改盒子 -->
+  <div class="content-wrapper" id="revise_rop">
+    <div class="modal-header">
+      <h4 class="modal-title" id="myModalLabel">
+      <img src="../../dist/img/编辑.png" alt="" class="images"></span> 修改库存
+      </h4>
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+        &times;
+      </button>
+    </div> 
+    <div class="modal-body">
+      <form id="inp_rop2">
+      <div class="input-group">
+        <span class="suo1 pub">原料批次</span>
+        <input type="text"  class="form-control" autocomplete="off">
+      </div>
+      
+      <div class="input-group zhong">
+        <span class="suo1 pub">原料种类</span>
+        <input type="text"  class="form-control" autocomplete="off">
+      </div>
+      <div class="input-group">
+          <span class="suo1 pub">原料重量(KG)</span>
+          <input type="text"  class="form-control" autocomplete="off">
+        </div>
+        <div class="input-group">
+          <span class="suo1 pub">存放地点</span>
+          <input type="text"  class="form-control" autocomplete="off" disabled="disabled">
+        </div>
+        <div class="input-group zhong">
+          <span class="suo1 pub">原料来源</span>
+          <input type="text" class="form-control" autocomplete="off" disabled="disabled">
+        </div>
+        <div class="input-group">
+            <span class="suo1 pub">原料产地(省/市)</span>
+            <input type="text"  class="form-control" autocomplete="off" disabled="disabled">
+          </div>
+          <div class="input-group zhong">
+            <span class="suo1 pub">原料采收时间</span>
+            <input type="text"  class="form-control" autocomplete="off" disabled="disabled">
+          </div>
+          <div class="input-group">
+            <span class="suo1 pub">原料贮藏方式</span>
+            <input type="text"  class="form-control" autocomplete="off" disabled="disabled">
+          </div>
+          <div class="input-group zhong">
+            <span class="suo1 pub">产地准入标准</span>
+            <input type="text"  class="form-control" autocomplete="off" disabled="disabled">
+          </div>
+          <div class="input-group">
+            <span class="suo1 pub">水分含量(%)</span>
+            <input type="text"  class="form-control" autocomplete="off" disabled="disabled">
+          </div>
+          <div class="input-group zhong">
+            <span class="suo1 pub">叶绿素含量(mg/g)</span>
+            <input type="text"  class="form-control" autocomplete="off" disabled="disabled">
+          </div>
+          <div class="input-group">
+            <span class="suo1 pub">Vc含量(mg/g)</span>
+            <input type="text"  class="form-control" autocomplete="off" disabled="disabled">
+          </div>
+          <div class="input-group zhong">
+            <span class="suo1 pub">菌落含量(CFU/g)</span>
+            <input type="text"  class="form-control" autocomplete="off" disabled="disabled">
+          </div>
+          <div class="input-group zhong">
+            <span class="suo1 pub">备注</span>
+            <input type="text"  class="form-control" autocomplete="off">
+          </div>
+          
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="rev">
+            提交
+          </button>
+    </div>
+  </form>
+  </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.0.0-alpha
-    </div>
     <strong>Copyright &copy; 2014-2018 <a href="#">AdminLTE.io</a>.</strong> All rights
     reserved.
   </footer>
@@ -567,13 +641,7 @@
 <script src="../../dist/js/layui/layui.all.js"></script>
 <script src="./js/table.js"></script>
 <script>
-layui.use('laydate', function(){
-  var laydate = layui.laydate;
-  //执行一个laydate实例
-  laydate.render({
-    elem: '#test1' //指定元素
-  });
-});
+
   </script>
 </body>
 </html>
