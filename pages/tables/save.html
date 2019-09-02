@@ -24,7 +24,7 @@
         table tbody tr td {
             position: relative;
             overflow: hidden;
-            width: 25%;
+            /* width: 25%; */
         }
 
         .inputStyle1 {
@@ -72,7 +72,7 @@
     </style>
 </head>
 
-<body>
+<body class="hold-transition sidebar-mini">
     <div class="wrapper">
         <!-- 右侧顶部导航条开始 -->
         <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
@@ -342,7 +342,7 @@
                       <table class="table table-bordered">
                         <thead>
                           <tr>
-                            <th>生产批次</th>
+                            <th class="shengc">生产批次</th>
                             <th>
                               <select>
                                 <option>批次号</option>
@@ -391,17 +391,53 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
+                          <tr class="line1">
                             <td>原料贮藏温度</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
                           </tr>
-                          <tr>
+                          <tr class="line2">
                             <td>环境温度</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
                           </tr>
-                          <tr>
+                          <tr class="line3">
                             <td>环境湿度</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
                           </tr>
-                          <tr>
+                          <tr class="line4">
                             <td>水分含量(%)</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
+                            <td>000000</td>
                           </tr>
                         </tbody>
                        </table>
@@ -409,6 +445,9 @@
                       </table>
                     </div>
                     <!-- /.card-body -->
+                    <div class="card-footer">
+                      <button type="button" class="btn btn-primary float-right chax" >查询</button>
+                    </div>
                   </div>
                   <!-- /.card -->
                 </div>
@@ -485,19 +524,14 @@
       
         <!-- 主信息区域内容区块结束 -->
      
-    </div>
+        </div>
     <!--主信息区域结束-->
     </div>
 </body>
+<!-- jQuery -->
 <script src="../../plugins/jquery/jquery.min.js"></script>
-<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="../../plugins/fastclick/fastclick.js"></script>
 <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="../../plugins/datatables/dataTables.bootstrap4.min.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
 <script src="../../plugins/tableExport/libs/FileSaver/FileSaver.min.js"></script>
 <script src="../../plugins/tableExport/libs/js-xlsx/xlsx.core.min.js"></script>
 <script src="../../plugins/tableExport/libs/pdfmake/pdfmake.min.js"></script>
@@ -505,8 +539,6 @@
 <script src="../../plugins/tableExport/libs/es6-promise/es6-promise.auto.min.js"></script>
 <script src="../../plugins/tableExport/libs/html2canvas/html2canvas.min.js"></script>
 <script src="../../plugins/tableExport/tableExport.js"></script>
-<!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- FastClick -->

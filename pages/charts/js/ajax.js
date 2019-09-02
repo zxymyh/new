@@ -62,7 +62,7 @@
                 $("input:eq(1)").val("")
                 $("input:eq(2)").val("")
                 $("input:eq(3)").val("")
-                $("input:eq(4)").val("")
+                $("input:eq(4)").val("")  
               }
           }
       })

@@ -5,19 +5,43 @@
 .form-group{
     float: left;
 }
-#content_rop,#chu_rop{
+#content_rop,#chu_rop,#revise_rop{
     display: none;
 }
-.image{
+.images{
     width: 18px;
     height: 18px;
     vertical-align:top;
 }
 table{
   text-align: center;
+  table-layout: fixed;
 }
 select{
-  width: 100px;
+  width: 97px;
   border: none;
+  text-align: center;
+  text-align-last: center;
+  font-weight: bold;
 }
+.chax{
+  width: 100px;
+}
+.opt{
+ width: 65%;
+}
+td,th{
+  vertical-align: middle !important;
+  border:1px solid #dee2e6;
+}
+td{
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+#test1,#test2,#test3{
+  text-align: center;
+}
+
+
 

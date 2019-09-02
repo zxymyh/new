@@ -6,7 +6,6 @@
   /* padding-bottom: 0; */
 }
 .operate{
-  font-size: .36rem;
   color: #067fff;
   cursor: pointer;
   margin: 0 .1rem;
@@ -48,9 +47,6 @@
   content: " ";
   clear: both;
   height: 0;
-}
-.active{
-  background: #999;
 }
 .layui-layer-btn0{
   color: #fff !important;
